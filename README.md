@@ -1,15 +1,17 @@
 # abiyabraham1-gmail.com
 Cloud Computing
+
 STUDENT NAME: Abraham Abiy
+
 STUDENT NUMBER: ec19462
 
-1) First we start launch aws ec2 instance and access it through Putty
+1)First we start launch aws ec2 instance and access it through Putty
 
-2) Execute the code for the inital GET from the api, using nano to create the file GetFromApi.py and using 'http://ec2-34-201-72-230.compute-1.amazonaws.com:5000/stops-street' url to run the get request
+2)Execute the code for the inital GET from the api, using nano to create the file GetFromApi.py and using 'http://ec2-34-201-72-230.compute-1.amazonaws.com:5000/stops-street' url to run the get request
 
-3) Next I saved the json into my computer and converted it to a csv so it would be compatible to the table
+3)Next I saved the json into my computer and converted it to a csv so it would be compatible to the table
 
-4) CREATE DATABASE
+4)CREATE DATABASE using following commands
 
 mkdir CW #create new subdirectory for task
 
@@ -32,15 +34,20 @@ COPY stops.stats(id, age_range, datetime, gender, involved_person, legislation, 
 
 6)Create Dockerfile using, nano Dockerfile 
 
-7) 'sudo docker inspect cassandra-CW' Use this command to find your ip address which is required for the app file 
+7)sudo docker inspect cassandra-CW' Use this command to find your ip address which is required for the app file 
 
-8) (RESTful API)Create file to execute post, get, put and delete requests from the databse using Cassandra queries with flask, using nano app.py
+8)(RESTful API)Create file to execute post, get, put and delete requests from the databse using Cassandra queries with flask, using nano app.py
 
-8) build and run instance 
+9) build and run instance 
 sudo docker build . --tag=cassandrarest:v1
 sudo docker run -p 80:80 cassandrarest:v1
 
 GET: curl -X GET URL/port/get/<id>
+  
 POST: curl -X POST URL/port/post/<id>
+  
 PUT: curl -X PUT URL/port/put/<id>
+  
 DELETE: curl -X URL/port/delete<id>
+
+ALL FILES USED ARE IN REPOSITORY
